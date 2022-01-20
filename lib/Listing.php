@@ -27,6 +27,17 @@
             return $results;
         }
 
-
+        //function to get listing by specific category
+        public function getByCategory($category){
+                $this->db->query("SELECT listings.*, categories.name AS cname 
+                FROM listings
+                INNER JOIN categories
+                ON listings.category_id = categories.id
+                WHERE listings.category_id = $category
+                ORDER BY post_date DESC
+                ");
+            $results = $this->db->resultSet();
+            return $results;
+        }
     
     }
