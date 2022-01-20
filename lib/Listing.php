@@ -40,4 +40,11 @@
             return $results;
         }
     
+        // Get a single listing by it's ID 
+        public function getListing($id){
+            $this->db->query("SELECT * FROM listings where id = $id");
+            //Assign row and return it
+            $row =$this->db->single();
+            return $row;
+        }
     }
