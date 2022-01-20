@@ -3,5 +3,6 @@
 <?php 
 
 include_once 'config/init.php' 
+$listing = new Listing;
 
 ?>
