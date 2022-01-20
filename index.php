@@ -2,11 +2,9 @@
 
 <?php 
 
-include_once 'config/init.php' 
 $listing = new Listing;
 $template = new Template('templates/frontpage.php');
 
-?>$category = isset($_GET['category']) ? $_GET['category'] : null;
 //if there's a category in the URL set to the var, if not set to null
 $category = isset($_GET['category']) ? $_GET['category'] : null;
 
