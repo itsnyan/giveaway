@@ -40,6 +40,13 @@
             return $results;
         }
     
+        // Get Category by it's ID
+        public function getCategory($category_id){
+            $this->db->query("SELECT * FROM categories WHERE id = $category_id");
+            $row = $this ->db->single();
+            return $row;
+        }
+
         // Get a single listing by it's ID 
         public function getListing($id){
             $this->db->query("SELECT * FROM listings where id = $id");
