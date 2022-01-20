@@ -11,6 +11,8 @@ $category = isset($_GET['category']) ? $_GET['category'] : null;
 //if category query listings only with that category
 if($category){
     $template->listings = $listing->getByCategory($category);
+    $template->title = 'Listings in '.$listing->getCategory($category)->name;
+
 } 
 
 // if not querly all listings 
